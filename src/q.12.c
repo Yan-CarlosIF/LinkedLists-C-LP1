@@ -94,5 +94,8 @@ int main() {
   printList(list);
   printDoublyList(doubleList);
 
+  freeListNoHead(&list);
+  freeDoublyList(&doubleList);
+
   return 0;
 }

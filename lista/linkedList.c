@@ -84,3 +84,40 @@ void printDoublyList(DoubleNode *head) {
     head = head->next;
   }
 }
+
+void freeList(LinkedList *list) {
+  Node *temp = list->head;
+
+  while (temp != NULL) {
+    Node *next = temp->next;
+    free(temp);
+    temp = next;
+  }
+
+  free(list);
+  list = NULL;
+}
+
+void freeListNoHead(Node **head) {
+  Node *temp = *head;
+
+  while (temp != NULL) {
+    Node *next = temp->next;
+    free(temp);
+    temp = next;
+  }
+
+  *head = NULL;
+}
+
+void freeDoublyList(DoubleNode **head) {
+  DoubleNode *temp = *head;
+
+  while (temp != NULL) {
+    DoubleNode *next = temp->next;
+    free(temp);
+    temp = next;
+  }
+
+  *head = NULL;
+}

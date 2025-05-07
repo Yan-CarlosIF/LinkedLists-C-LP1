@@ -26,6 +26,8 @@ void insert(Node **head, char *value);
 void insertDoubleNode(DoubleNode **head, char *value);
 void printList(Node *head);
 void printDoublyList(DoubleNode *head);
+void freeListNoHead(Node **head);
+void freeDoublyList(DoubleNode **head);
 
 int main() {
   Node *list = NULL;
@@ -42,6 +44,9 @@ int main() {
   printList(list);
 
   printDoublyList(doublyList);
+
+  freeListNoHead(&list);
+  freeDoublyList(&doublyList);
 
   return 0;
 }
@@ -128,4 +133,28 @@ void printDoublyList(DoubleNode *head) {
     head = head->next;
   }
   printf("\n");
+}
+
+void freeListNoHead(Node **head) {
+  Node *list = *head, *temp = NULL;
+
+  while (list != NULL) {
+    temp = list->next;
+    free(list);
+    list = temp;
+  }
+
+  *head = NULL;
+}
+
+void freeDoublyList(DoubleNode **head) {
+  DoubleNode *list = *head, *temp = NULL;
+
+  while (list != NULL) {
+    temp = list->next;
+    free(list);
+    list = temp;
+  }
+
+  *head = NULL;
 }

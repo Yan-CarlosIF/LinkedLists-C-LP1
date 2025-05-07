@@ -8,13 +8,13 @@
 #include "../lista/linkedList.c"
 
 bool ListAreTheSame(Node *list1, Node *list2) {
-  while (list1 != NULL) {
+  while (list1 != NULL && list2 != NULL) {
     if (list1->value != list2->value) return false;
     list1 = list1->next;
     list2 = list2->next;
   }
 
-  return true;
+  return (list1 == NULL && list2 == NULL);
 }
 
 int main() {
@@ -34,6 +34,9 @@ int main() {
   } else {
     printf("\nAs duas listas nao sao iguais!");
   }
+
+  freeListNoHead(&list1);
+  freeListNoHead(&list2);
 
   return 0;
 }

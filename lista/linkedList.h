@@ -23,8 +23,11 @@ typedef struct {
 LinkedList *initList();
 Node *createNode(int value);
 void push(LinkedList *list, int value);  // Para listas com head
-void pushDoubleNode(DoubleNode **head, int value);  // Para listas duplamente encadeadas
+void pushDoubleNode(DoubleNode **head, int value); // Para listas duplamente encadeadas
 void pushNoHead(Node **head, int value);  // Para listas sem head
 void printList(Node *head);
 void printDoublyList(DoubleNode *head);
+void freeList(LinkedList *list);
+void freeListNoHead(Node **head);
+void freeDoublyList(DoubleNode **head);
 #endif

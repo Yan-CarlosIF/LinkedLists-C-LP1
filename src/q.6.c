@@ -44,5 +44,7 @@ int main() {
 
   printDoublyList(concatenatedList);
 
+  freeDoublyList(&concatenatedList);
+
   return 0;
 }

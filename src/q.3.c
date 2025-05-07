@@ -31,5 +31,8 @@ int main() {
   // Lista Duplamente Encadeada
   printDoublyList(DoublyLinkedList);
 
+  freeListNoHead(&list);
+  freeDoublyList(&DoublyLinkedList);
+
   return 0;
 }

@@ -82,5 +82,8 @@ int main() {
 
   printDoublyList(doublyList);
 
+  freeListNoHead(&list);
+  freeDoublyList(&doublyList);
+
   return 0;
 }

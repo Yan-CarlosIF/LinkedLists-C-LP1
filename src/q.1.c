@@ -44,5 +44,7 @@ int main() {
   printf("\nNumero de celulas: %d", numberOfCells(list));
   printf("\nNumero de celulas: %d", numberOfCellsNoHead(list->head));
 
+  freeList(list);
+
   return 0;
 }

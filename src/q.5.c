@@ -50,5 +50,8 @@ int main() {
   printList(copiedList);
   printDoublyList(copiedDoublyList);
 
+  freeListNoHead(&list);
+  freeDoublyList(&doublyList);
+
   return 0;
 }

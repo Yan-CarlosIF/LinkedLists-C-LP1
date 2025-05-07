@@ -37,6 +37,9 @@ int main() {
     printf("%d ", arrayWithHead[i]);
   }
 
+  freeListNoHead(&list);
+  freeList(listWithHead);
+
   return 0;
 }
 

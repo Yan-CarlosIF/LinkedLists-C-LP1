@@ -54,5 +54,7 @@ int main() {
     printf("\nItem nao encontrado recursivamente!");
   }
 
+  freeListNoHead(&lista);
+
   return 0;
 }
